@@ -4,3 +4,5 @@ python-telegram-bot == 20.8
 nlp-id == 0.1.15.0
 nltk
 scikit-learn
+pandas
+tqdm

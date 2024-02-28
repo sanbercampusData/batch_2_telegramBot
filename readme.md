@@ -17,3 +17,9 @@ inputan berupa pertanyaan
 --> pertanyaannya akan dibersihkan dan diolah sebelum di proses 
 --> dicari nilainya pada dataset informasi [cosinus distance]
 --> saat sudah ditemukan akan dijadikan jawaban
+
+
+Membuat sebuah endpoint untuk melakukan prediksi sentimen
+- sebuah endpoint yang bisa digunakan untuk melatih model kita
+- hasil evaluasi keluar, kita simpan model kita
+- load model dan lakukan prediksi

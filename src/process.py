@@ -1,5 +1,6 @@
 from src.nlp_core.text_preprocessing import TextProcessing
 from src.nlp_core.document_search import SearchDocument
+from src.nlp_core.sentiment_analysis import SentimentAnalysis
 
 def search_services(data:str, env)->str:
     '''Digunakan untuk melakukan pencarian pada dataset yang dimiliki'''
@@ -20,3 +21,15 @@ def text_preprocessing(text:str, tp)->str:
     result = tp.lemmatisasi(result)
 
     return result
+
+def train_model(env):
+    '''latih model'''
+    sa = SentimentAnalysis(env)
+
+    return  sa.train_model()
+
+def prediksi_sentiment(env, data):
+    '''latih model'''
+    sa = SentimentAnalysis(env)
+    
+    return  sa.prediksi(data)

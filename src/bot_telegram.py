@@ -40,6 +40,30 @@ async def sambercampus_bertanya(event):
 
     await event.respond(f"{result}")
 
+#endppoint yang digunakan untuk meminta pada program untuk melakukan pelatihan model machine learning
+@bot.on(events.NewMessage(pattern='#latih_model'))
+async def latih_model(event):
+    '''training NLP Sentiment model'''
+
+    data = event.text.split()
+    data.pop(0)
+    data = ' '.join(data)
+    result = process.train_model(env)
+
+    await event.respond(f"{result}")
+
+@bot.on(events.NewMessage(pattern='#prediksi_sentiment'))
+async def prediksi(event):
+    '''training NLP Sentiment model'''
+
+    data = event.text.split()
+    data.pop(0)
+    data = ' '.join(data)
+    result = process.prediksi_sentiment(env, data)
+
+    await event.respond(f"{result}")
+
+
 
 def run():
     '''start the bot'''
